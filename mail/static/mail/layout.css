@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&family=Work+Sans:wght@400;700;900&display=swap&family=Roboto:wght@400;700;900&display=swap");
+@font-face {
+  font-family: 'iA Writer Duospace';
+  src: url(../Fonts/iAWriterDuo.otf);
+}
+
+body {
+  font-size: 16px;
+}
+
+#nav-left {
+  padding-left: 35px;
+  width: 270px;
+  height: 100vh;
+  border: none;
+  background: -webkit-gradient(linear, left top, right top, color-stop(13%, #630b21), color-stop(13%, #a41034), color-stop(73%, #a41034));
+  background: linear-gradient(to right, #630b21 13%, #a41034 13%, #a41034 73%);
+  float: left;
+}
+
+#nav-left div {
+  border: 1px solid transparent;
+}
+
+#nav-left #logo-pic {
+  width: 100%;
+  text-align: center;
+}
+
+#nav-left #logo-pic img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+#nav-left #logo-pic h1 {
+  margin: 0;
+  font: 900 4em 'Poppins', sans-serif;
+  text-align: center;
+  color: #a41034;
+  text-shadow: 2px -2px 4px #730b24, -2px 2px 4px #d51544;
+}
+
+#nav-left #logo-pic #user {
+  color: #ffbc42;
+  font: 700 1.3em "Poppins", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#nav-left #nav-links {
+  text-align: center;
+}
+
+#nav-left #nav-links ul {
+  list-style: none outside;
+  margin: 15px 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+#nav-left #nav-links ul span {
+  background: -webkit-linear-gradient(#a41034, #ffbc42);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#nav-left #nav-links ul button {
+  font: 900 1.4em "Poppins", sans-serif;
+  border: 4px solid #ffbc42;
+  border-radius: 30px;
+  background: white;
+  margin: 10px 0;
+}
+
+#nav-left #nav-links ul button:hover {
+  background: black;
+}
+
+#nav-left #nav-links ul #logout, #nav-left #nav-links ul #logout-i .bi {
+  color: #ffbc42;
+}
+
+#nav-left #nav-links ul .nav-links, #nav-left #nav-links ul #logout {
+  color: white;
+  text-decoration: none;
+  font: 500 1.2em 'Poppins', sans-serif;
+  text-align: left;
+}
+
+#nav-left #nav-links ul .nav-links #logout-i:hover, #nav-left #nav-links ul #logout #logout-i:hover {
+  background: black;
+  color: #ffbc42;
+}
+
+#nav-left #nav-links ul .nav-links #logout-i:hover .bi, #nav-left #nav-links ul #logout #logout-i:hover .bi {
+  color: #ffbc42;
+}
+
+#nav-left #nav-links ul .nav-links li:hover, #nav-left #nav-links ul #logout li:hover {
+  background: #ffbc42;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  color: #a41034;
+}
+
+#nav-left #nav-links ul .nav-links li:hover .glyphicon, #nav-left #nav-links ul .nav-links li:hover .bi, #nav-left #nav-links ul #logout li:hover .glyphicon, #nav-left #nav-links ul #logout li:hover .bi {
+  background: -webkit-linear-gradient(#a41034, #a41034);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#nav-left #nav-links ul .nav-links .glyphicon, #nav-left #nav-links ul .nav-links .bi, #nav-left #nav-links ul #logout .glyphicon, #nav-left #nav-links ul #logout .bi {
+  margin: 0 25px 0 60px;
+  background: -webkit-linear-gradient(white, white);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: larger;
+}
+
+input[type=checkbox] {
+  -webkit-transform: scale(1.4);
+  transform: scale(1.4);
+  outline: none;
+}
+
+#nav-top {
+  margin-left: 270px;
+  padding-left: 22px;
+  height: 45px;
+  border: none;
+  background: #a41034;
+}
+
+#nav-top div {
+  display: inline-block;
+  margin: 5px;
+  width: 40px;
+  line-height: 35px;
+  border: none;
+  border-radius: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+}
+
+#nav-top .email-options:hover, #nav-top #update:hover {
+  color: #ffbc42;
+  cursor: pointer;
+}
+
+#nav-top #reply {
+  display: none;
+}
+
+#emails-view {
+  margin: 5px 0 0 290px;
+  padding: 15px 0;
+  height: 850px;
+  overflow-y: scroll;
+  border: none;
+}
+
+#emails-view #email-inbox {
+  padding-left: 5px;
+}
+
+#emails-view #email-inbox h1 {
+  font: 500 1.2em 'Poppins';
+  text-transform: uppercase;
+}
+
+#emails-view #email-inbox .showMails {
+  width: 100%;
+  height: 33px;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+  cursor: pointer;
+}
+
+#emails-view #email-inbox .showMails div {
+  display: inline-block;
+  font: 400 1rem 'Poppins';
+  line-height: 30px;
+  border: none;
+}
+
+#emails-view #email-inbox .showMails .showSender {
+  width: 280px;
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+#emails-view #email-inbox .showMails .showSender, #emails-view #email-inbox .showMails .showSubject {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#emails-view #email-inbox .showMails .showSubject {
+  width: 69%;
+}
+
+#emails-view #email-inbox .showMails .showSubject .showBody {
+  color: #727272;
+}
+
+#emails-view #email-inbox .showMails .showTimestamp, #emails-view #email-inbox .showMails .showOptions {
+  float: right;
+  width: 180px;
+  margin-right: 5px;
+}
+
+#emails-view #email-inbox .showMails .showOptions {
+  text-align: right;
+}
+
+#emails-view #email-inbox .showMails .showOptions a {
+  display: inline-block;
+  margin: 0 8px;
+  font-size: 2rem;
+  color: #a41034;
+  text-decoration: none;
+}
+
+#emails-view #email-inbox .showMails .showOptions a:hover {
+  color: #ffbc42;
+}
+
+#emails-view #email-inbox .showMails:hover {
+  margin-bottom: 3px;
+  -webkit-box-shadow: 1px 1px 5px #555555;
+          box-shadow: 1px 1px 5px #555555;
+  border-top: 1px solid #b8b8b8;
+  border-bottom: 1px solid #858585;
+}
+
+#emails-view #getEmail {
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+}
+
+#emails-view #getEmail .subject-title h1 {
+  font: 900 2em "Poppins";
+}
+
+#emails-view #getEmail .info {
+  margin: 20px 0;
+  border-left: 2px solid #a41034;
+  padding-left: 10px;
+}
+
+#emails-view #getEmail .info p {
+  color: #797979;
+  font: 400 1em "Work Sans", sans-serif;
+}
+
+#emails-view #getEmail .info p span {
+  color: black;
+}
+
+#emails-view #getEmail .info p .to {
+  word-wrap: break-word;
+}
+
+#emails-view #getEmail #body-section {
+  margin-top: 54px;
+  width: 99%;
+  border: none;
+  outline: none;
+  font: 400 1.1em "Poppins";
+  white-space: pre-wrap;
+}
+
+#emails-view #compose-view {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 30px;
+  width: 650px;
+  height: 600px;
+  border: 1px solid #afafaf;
+  -webkit-box-shadow: 1px 5px 10px #afafaf;
+          box-shadow: 1px 5px 10px #afafaf;
+  background: white;
+}
+
+#emails-view #compose-view #title-bar {
+  line-height: 40px;
+  background: #a41034;
+}
+
+#emails-view #compose-view #title-bar span, #emails-view #compose-view #title-bar #close-btn {
+  color: #ffbc42;
+  font-weight: bold;
+  margin: 0 15px;
+}
+
+#emails-view #compose-view #title-bar span {
+  font: 500 1.1em "Poppins", sans-serif;
+}
+
+#emails-view #compose-view #title-bar #close-btn {
+  margin-top: 10px;
+  float: right;
+  font-size: 0.8em;
+  cursor: pointer;
+}
+
+#emails-view #compose-view #compose-recipients, #emails-view #compose-view #compose-subject, #emails-view #compose-view #compose-body {
+  font: 400 1em "Work Sans", sans-serif;
+}
+
+#compose-view, #title-bar {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+#compose-form .sections {
+  width: 100%;
+  padding: 10px 5px;
+  border-bottom: 1px solid #e7e7e7;
+  font: 400 1em "Work Sans", sans-serif;
+}
+
+#compose-form .sections input {
+  width: 95%;
+  outline: none;
+  border: none;
+  color: black;
+}
+
+#compose-form .sections #to {
+  color: #747474;
+}
+
+#compose-form .sections #compose-subject {
+  width: 100%;
+}
+
+#compose-form #c-body {
+  overflow: hidden;
+  width: 100%;
+  height: 380px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #e7e7e7;
+  color: black;
+}
+
+#compose-form #c-body textarea {
+  overflow-y: scroll;
+  resize: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  font: 400 1em "Work Sans", sans-serif;
+}
+
+#compose-form #compose-submit {
+  float: right;
+  margin-top: 25px;
+  margin-right: 15px;
+  padding: 8px 20px;
+  background: #a41034;
+  color: #ffbc42;
+  border: 1px solid #a41034;
+  border-radius: 8px;
+  outline: none;
+  font: 500 1.1em "Poppins", sans-serif;
+}
+
+#compose-form #error-msg {
+  display: none;
+  border: 1px solid black;
+  border-radius: 20px;
+  width: 400px;
+  line-height: 40px;
+  margin-top: 30px;
+  margin-left: 40px;
+  text-align: center;
+  background: black;
+  color: #ffbc42;
+  font: 400 1.8rem "Work Sans", sans-serif;
+}
+/*# sourceMappingURL=layout.css.map */

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{% static 'mail/Images/favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" href="{% static 'mail/layout.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>Harvard Mail</title>
+    </head>
+    <body>
+        <div id="nav-left">
+            <div id="logo-pic">
+                
+                <img src="{% static 'mail/Images/logo.png' %}" alt="Harvard Logo">
+                <h1>MAIL</h1>
+                <div id="user" title="{{ request.user.email }}">{{ request.user.first_name }} {{ request.user.last_name }}</div>
+            </div>
+
+            <div id="nav-links">
+                <ul type="none">
+                    <li><button class="btn btn-default btn-sm" id="compose">
+                        <span class="glyphicon glyphicon-plus"></span><span> Compose</span>
+                    </button></li>
+                    <a class="nav-links" id="inbox"><li><i class="bi bi-inbox-fill"></i>Inbox</li></a>
+                    <a class="nav-links" id="sent"><li><span class="glyphicon glyphicon-send"></span>Sent</li></a>
+                    <a class="nav-links" id="archive"><li><i class="bi bi-cloud-check-fill"></i>Archive</li></a>
+                    <a href="{% url 'logout' %}" id="logout"><li id="logout-i"><i class="bi bi-box-arrow-right"></i>Log Out</li></a>
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="nav-top">
+        </div>
+        
+        {% block body %}
+        {% endblock %}
+
+        <script src="{% static 'mail/inbox.js' %}"></script>
+
+    </body>
+</html>

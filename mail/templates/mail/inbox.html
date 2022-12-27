@@ -1,0 +1,36 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+
+    <div id="emails-view">
+        <div id="email-inbox"></div>
+
+        <div id="getEmail"></div>
+
+        <div id="compose-view">
+            <div id="title-bar">
+                <span>New Email</span><span id="close-btn"><i class="bi bi-x-lg" id="closeBtn"></i></span>
+            </div>
+            <form id="compose-form">
+                <div class="sections">
+                    <span id="to">To:</span>
+                    <input id="compose-recipients" name="recipients" required>
+                </div>
+
+                <div class="sections">
+                    <input id="compose-subject" name="subject" placeholder="Subject" required>
+                </div>
+
+                <div class="sections" id="c-body">
+                    <textarea id="compose-body" name="body" required></textarea>
+                </div>
+
+                <div id="error-msg"></div>
+                <input id="compose-submit" name="submit" type="submit" value="Send" />
+            </form>
+        </div>
+        
+    </div>
+
+{% endblock %}

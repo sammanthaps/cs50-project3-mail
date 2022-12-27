@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="{% static 'mail/Images/favicon.ico' %}" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="{% static 'mail/login.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+        <title>Harvard Mail/Login</title>
+    </head>
+
+    <body>
+        <div class="main">
+            <div class="container a-container" id="a-container">
+                <form class="form" id="a-form" action="{% url 'login' %}" method="POST">
+                    {% csrf_token %}
+                    <h2 class="form_title title">Sign In</h2>
+                    {% if alert %}
+                        <div class="error-message"><span class="error">Error:</span> {{ alert }}</div>
+                    {% endif %}
+                    <input class="form__input" type="email" name="email" placeholder="Email" required>
+                    <input class="form__input" type="password" name="password" placeholder="Password" required>
+                    <input class="button" type="submit" name="submit" value="LOGIN"/>
+                </form>
+            </div>
+            <div class="container b-container" id="b-container">
+                <form class="form" id="b-form" action="{% url 'register' %}" method="POST">
+                    {% csrf_token %}
+                    <h2 class="form_title title">Sign Up</h2>
+                    {% if message %}
+                        <div class="error-message">Error: {{ message }}</div>
+                    {% endif %}
+                    <input class="form__input" type="text" name="first_name" placeholder="First Name" required>
+                    <input class="form__input" type="text" name="last_name" placeholder="Last Name" required>
+                    <input class="form__input" type="email" name="email" placeholder="Email" required>
+                    <input class="form__input" type="password" name="password"  placeholder="Password" required>
+                    <input class="form__input" type="password" name="confirmation" placeholder="Confirm Password" required>
+                    <input class="button" type="submit" name="submit" value="REGISTER"/>
+                </form>
+            </div>
+            <div class="switch" id="switch-cnt">
+                <div class="switch__circle"></div>
+                <div class="switch__circle switch__circle--t"></div>
+                <div class="switch__container" id="switch-c1">
+                    <div class="logo-pic">
+                        <img src="{% static 'mail/Images/logo.png' %}" alt="HARVARD">
+                        <h1>MAIL</h1>
+                    </div>
+                    <button class="switch__button button switch-btn">REGISTER</button>
+                </div>
+                <div class="switch__container is-hidden" id="switch-c2">
+                    <div class="nav-left">
+                        <div class="logo-pic">
+                            <img src="{% static 'mail/Images/logo.png' %}" alt="HARVARD">
+                            <h1>MAIL</h1>
+                        </div>
+                    </div> 
+                    <button class="switch__button button switch-btn">LOGIN</button>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'mail/login.js' %}"></script>
+    </body>
+
+</html>
