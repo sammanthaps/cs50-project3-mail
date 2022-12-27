@@ -22,4 +22,4 @@ Design a front-end for an email client that makes API calls to send and receive 
   * Pre-fill the composition form with the recipient field set to whoever sent the original email.
   * Pre-fill the subject line. If the original email had a subject line of foo, the new subject line should be Re: foo. (If the subject line already begins with Re: , no need to add it again.)
 
-If you want to see a demonstration of my project functionality: **<https://youtu.be/owTdUo26pOY>**
+If you want to see a demonstration of my project functionality: **<https://youtu.be/owTdUo26pOY>*
